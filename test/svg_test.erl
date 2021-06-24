@@ -18,7 +18,7 @@
 -include_lib("eunit/include/eunit.hrl").
 
 rect_test() ->
-   ok = svg:write("rect.svg",
+   ok = svg:write("test/rect.svg",
       svg:add(
    	   svg:add(
    	      svg:rect({{50,50}, {100,100}}),
@@ -34,7 +34,7 @@ rect_test() ->
 
 
 circle_test() ->
-   ok = svg:write("circle.svg",
+   ok = svg:write("test/circle.svg",
       svg:add(
    	   svg:add(
    	      svg:circle({{100,100}, 50}),
@@ -49,14 +49,14 @@ circle_test() ->
    ).
 
 ellipse_test() ->
-   ok = svg:write("ellipse.svg",
+   ok = svg:write("test/ellipse.svg",
       svg:add(
    	   svg:add(
    	      svg:ellipse({100,100}, {90,50}),
    	      svg:g([
    	      	{fill,   '#666'}, 
    	      	{stroke, '#333'},
-   	      	{'stroke-width', 3}
+   	      	{'test/stroke-width', 3}
    	      ])
    	   ),
    	   svg:init(200, 200)
@@ -64,7 +64,7 @@ ellipse_test() ->
    ).
 
 path_test() ->
-   ok = svg:write("path.svg",
+   ok = svg:write("test/path.svg",
       svg:add(
    	   svg:add(
    	      svg:path([{0,50},{50,200},{100,0},{150,200},{200,0}]),
@@ -79,7 +79,7 @@ path_test() ->
    ).
 
 closed_path_test() ->
-   ok = svg:write("pathz.svg",
+   ok = svg:write("test/pathz.svg",
       svg:add(
    	   svg:add(
    	      svg:path([{0,50},{50,200},{100,0},{150,200},'Z']),
@@ -94,7 +94,7 @@ closed_path_test() ->
    ).   
 
 curve_test() ->
-   ok = svg:write("curve.svg",
+   ok = svg:write("test/curve.svg",
       svg:add(
          svg:add(
             svg:path([
@@ -113,7 +113,7 @@ curve_test() ->
    ).
 
 text_test() ->
-   ok = svg:write("text.svg",
+   ok = svg:write("test/text.svg",
       svg:add(
          svg:add(
             svg:text({20,100}, "Hello SVG!"),
@@ -130,7 +130,7 @@ text_test() ->
    ).
 
 %% horizontal_layout_test() ->
-%%    ok = svg:write("horizontal.svg",
+%%    ok = svg:write("test/horizontal.svg",
 %%       svg:add(
 %%          svg:add(
 %%             [
@@ -148,7 +148,7 @@ text_test() ->
 %%    ).
 
 %% vertical_layout_test() ->
-%%    ok = svg:write("vertical.svg",
+%%    ok = svg:write("test/vertical.svg",
 %%       svg:add(
 %%          svg:add(
 %%             [
