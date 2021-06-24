@@ -1,15 +1,22 @@
-{application, svg,
-   [
-      {description, "erlang SVG library"},
-      {vsn,         "0.2.0"},
-      {modules,     [
-         svg
-      ]},
-      {registered,  []},
-      {applications,[
-         kernel,
-         stdlib
-      ]},
-      {env, []}
-   ]
-}.  
+{application, svg, [
+    {description, "Erlang SVG library"},
+    {vsn, "0.2.0"},
+    {modules, [
+        svg
+    ]},
+    {registered,  []},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {env, []},
+
+    %% Package metadata:
+    {pkg_name, erlang_svg},
+    {maintainers, ["Duncan McGreggor"]},
+    {licenses, ["BSD-3"]},
+    {links, [
+        {"GitHub", "https://github.com/erlsci/svg"},
+        {"Hex", "https://hex.pm/packages/erlang_svg"}
+    ]}
+ ]}.
