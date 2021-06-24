@@ -127,8 +127,10 @@ add(E, {Tag, Attrs, Inner}=C)
    case lists:keyfind(layout, 1, Attrs) of
       false       -> 
          {Tag, Attrs, Inner ++ E};
-      {_, Layout} ->
-         svg_layout:add(Layout, E, C)
+      {_, Layout} -> 
+         {error, "Broken API - no svg_layout module; perhapds svg:layout/3 is needed?"}
+         %% XXX tests indicate that there should at least be an svg:layout/2 ... 
+         %%svg_layout:add(Layout, E, C)
    end.
 
 %%
